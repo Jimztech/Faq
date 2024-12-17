@@ -1,0 +1,29 @@
+:root {
+    --White: hsl(0, 0%, 100%);
+    --LightPink: hsl(275, 100%, 97%);
+    --GrayishPurple: hsl(292, 16%, 49%);
+    --DarkPurple: hsl(292, 42%, 14%);
+}
+
+@font-face {
+    font-family: "Work Sans";
+    src: url("../assets/fonts/WorkSans-VariableFont_wght.ttf");
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    background-color: var(--LightPink);
+    background-image: url("../assets/images/background-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    padding: 0 1rem;
+}
+main {
+    background-color: var(--White);
+    padding: 1rem 2rem;
+}
+.top-section {}
