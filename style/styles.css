@@ -12,6 +12,7 @@
 
 body {
     font-family: "Work Sans", sans-serif;
+    font-size: 1rem;
     background-color: var(--LightPink);
     background-image: url("../assets/images/background-pattern-mobile.svg");
     background-repeat: no-repeat;
@@ -19,11 +20,68 @@ body {
     background-size: 100% auto;
     display: grid;
     place-content: center;
-    height: 100vh;
-    padding: 0 1rem;
+    min-height: 100vh;
+    padding: 6rem 1rem;
 }
 main {
     background-color: var(--White);
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
+    border-radius: 0.8rem;
 }
-.top-section {}
+h1 {
+    color: var(--DarkPurple);
+}
+p {
+    display: none;
+    color: var(--GrayishPurple);
+}
+h2 {
+    font-weight: 550;
+    color: var(--DarkPurple);
+}
+
+/* icon styling*/
+.plus-icon {
+    width: 2.5rem;
+}
+
+/* Header container styling */
+.top-section {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.star-container {
+    align-self: center;
+}
+
+
+/* faq section container styling */
+.faq-section {
+    display: flex;
+    flex-direction: column;
+}
+.faq-accordion {
+    display: flex;
+    gap: 2rem;
+}
+.plus-container {
+    align-self: center;
+}
+
+
+/* 700px to 899px styling */
+@media (min-width: 43.75rem) and (max-width: 56.18rem) {
+    body {
+        padding: 0 1rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .plus-container {
+        display: flex;
+        margin-left: auto;
+    }
+}
+
+/**/
