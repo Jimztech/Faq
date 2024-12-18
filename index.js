@@ -26,6 +26,31 @@ document.addEventListener("DOMContentLoaded", () => {
       // Add event listeners for both the question and the plus icon
       question.addEventListener("click", toggleFAQ);
       plusIcon.addEventListener("click", toggleFAQ);
+
+      // Keyboard navigation
+      question.addEventListener("keydown", (event) => {
+        switch (event.key) {
+          case "ArrowDown": // Move to the next question
+            event.preventDefault();
+            const nextIndex = (index + 1) % faqAccordions.length;
+            faqAccordions[nextIndex].querySelector(".faq-question").focus();
+            break;
+  
+          case "ArrowUp": // Move to the previous question
+            event.preventDefault();
+            const prevIndex = (index - 1 + faqAccordions.length) % faqAccordions.length;
+            faqAccordions[prevIndex].querySelector(".faq-question").focus();
+            break;
+  
+          case "Enter": // Toggle FAQ on Enter key
+          case " ": // Toggle FAQ on Space key
+            event.preventDefault();
+            toggleFAQ();
+            break;
+        }
+      });
     });
 });
-  
+
+
+
